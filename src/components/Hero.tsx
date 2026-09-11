@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { OrbitScene } from "@/components/OrbitScene";
 import { site } from "@/data/portfolio";
 import { useMotionReady } from "@/components/MotionReady";
 import { useI18n } from "@/components/LanguageProvider";
@@ -17,14 +16,14 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[calc(100svh-4.25rem)] flex-col justify-end overflow-hidden pb-16 pt-10 md:justify-center md:pb-24 md:pt-14"
+      className="relative flex min-h-[calc(100svh-4.25rem)] flex-col justify-end overflow-hidden pb-28 pt-10 md:justify-center md:pb-24 md:pt-14"
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="hero-veil absolute inset-0" />
         <div className="hero-veil-top absolute inset-x-0 top-0 h-40" />
       </div>
 
-      <OrbitScene />
+      <div className="hero-blueprint" aria-hidden="true"><div /><div /><div /><span>DESIGN / DEVELOP / OPTIMIZE</span></div>
       <motion.div
         className="section-shell relative z-10 w-full"
         initial="hidden"
@@ -137,3 +136,4 @@ export function Hero() {
     </section>
   );
 }
+

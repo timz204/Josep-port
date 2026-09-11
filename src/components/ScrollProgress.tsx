@@ -1,10 +1,9 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 /** Thin reading-progress rail under the fixed header */
 export function ScrollProgress() {
-  const reduceMotion = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 140,
@@ -12,9 +11,6 @@ export function ScrollProgress() {
     restDelta: 0.001,
   });
 
-  if (reduceMotion) {
-    return null;
-  }
 
   return (
     <div
@@ -26,3 +22,4 @@ export function ScrollProgress() {
     </div>
   );
 }
+

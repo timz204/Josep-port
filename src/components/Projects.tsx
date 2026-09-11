@@ -9,7 +9,7 @@ import { useI18n } from "@/components/LanguageProvider";
 import { Icons } from "@/lib/icons";
 
 export function Projects() {
-  const { m, locale } = useI18n();
+  const { m } = useI18n();
   const [expanded, setExpanded] = useState(false);
   const visible = expanded ? projectsMeta : projectsMeta.slice(0, 6);
   return (
@@ -30,7 +30,7 @@ export function Projects() {
                     <p className="mb-3 break-all font-mono text-xs text-muted">{new URL(project.url).hostname.replace("www.", "")}</p>
                     <h3 className="font-display text-xl font-semibold text-ink">{project.company}</h3>
                     <span className="mt-auto flex items-center justify-between gap-4 pt-7 text-sm font-semibold text-accent">
-                      {locale === "es" ? "Visitar sitio" : "Visit website"} <Icons.arrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                      Visit website <Icons.arrowRight size={18} className="transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
                 </a>
@@ -40,7 +40,7 @@ export function Projects() {
         </div>
         <div className="mt-10 text-center">
           <button type="button" className="btn-secondary" aria-expanded={expanded} aria-controls="project-grid" onClick={() => setExpanded(!expanded)}>
-            {expanded ? (locale === "es" ? "Mostrar menos" : "Show fewer projects") : (locale === "es" ? "Ver los 21 proyectos" : "Explore all 21 projects")}
+            {expanded ? "Show fewer projects" : "Explore all 21 projects"}
             <Icons.arrowRight size={16} />
           </button>
         </div>

@@ -9,7 +9,6 @@ import "./globals.css";
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.add('light');}catch(e){}})();`;
 
-const localeInitScript = `(function(){try{var l=localStorage.getItem('locale');if(l==='es'||l==='en')document.documentElement.lang=l;else if(navigator.language.toLowerCase().indexOf('es')===0)document.documentElement.lang='es';}catch(e){}})();`;
 
 const manrope = Manrope({
   variable: "--font-sans",
@@ -63,7 +62,6 @@ export default function RootLayout({
     >
       <body className="min-h-full antialiased">
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        <script dangerouslySetInnerHTML={{ __html: localeInitScript }} />
         <JsonLd />
         <ThemeProvider>
           <LanguageProvider>
