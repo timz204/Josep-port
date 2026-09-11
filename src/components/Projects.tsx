@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ProjectCover } from "@/components/ProjectCover";
 import { projectsMeta } from "@/data/portfolio";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
@@ -21,11 +22,7 @@ export function Projects() {
             <Reveal key={project.id} delay={(index % 3) * .07}>
               <TiltCard>
                 <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-motion-card group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface/90 shadow-[var(--shadow)]">
-                  <div className={`project-cover project-cover--${index % 3}`} aria-hidden="true">
-                    <span className="project-number">{String(index + 1).padStart(2, "0")}</span>
-                    <span className="project-monogram">{project.company.split(" ").slice(0, 2).map(word => word[0]).join("")}</span>
-                    <span className="project-cover-orbit" />
-                  </div>
+                  <ProjectCover url={project.url} name={project.company} />
                   <div className="flex flex-1 flex-col p-6">
                     <p className="mb-3 break-all font-mono text-xs text-muted">{new URL(project.url).hostname.replace("www.", "")}</p>
                     <h3 className="font-display text-xl font-semibold text-ink">{project.company}</h3>
