@@ -1,0 +1,2 @@
+import { site } from "@/data/portfolio";
+export function JsonLd() { const data = {"@context":"https://schema.org","@type":"Person",name:site.name,jobTitle:"WordPress Developer & SEO Specialist",email:site.email,telephone:site.phone,address:{"@type":"PostalAddress",addressCountry:"PH",addressLocality:"Cagayan de Oro"},knowsAbout:["WordPress","Elementor Pro","SEO","Core Web Vitals"]}; return <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(data)}} />; }

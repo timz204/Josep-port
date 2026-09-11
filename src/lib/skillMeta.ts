@@ -1,0 +1,263 @@
+import type { IconType } from "react-icons";
+import {
+  FiBox,
+  FiCode,
+  FiCpu,
+  FiDatabase,
+  FiGrid,
+  FiLayers,
+  FiLink2,
+  FiServer,
+  FiShield,
+  FiZap,
+  FiCloud,
+} from "react-icons/fi";
+import {
+  SiCss,
+  SiDocker,
+  SiHtml5,
+  SiJavascript,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPhp,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiTypescript,
+  SiVuedotjs,
+  SiLaravel,
+  SiDjango,
+} from "react-icons/si";
+
+export type SkillTone = {
+  icon: IconType;
+  color: string;
+  soft: string;
+  border: string;
+};
+
+const tones = {
+  js: {
+    icon: SiJavascript,
+    color: "#f7c948",
+    soft: "rgba(247, 201, 72, 0.35)",
+    border: "rgba(247, 201, 72, 0.9)",
+  },
+  ts: {
+    icon: SiTypescript,
+    color: "#4ecdc4",
+    soft: "rgba(78, 205, 196, 0.32)",
+    border: "rgba(78, 205, 196, 0.88)",
+  },
+  react: {
+    icon: SiReact,
+    color: "#4ecdc4",
+    soft: "rgba(78, 205, 196, 0.32)",
+    border: "rgba(78, 205, 196, 0.88)",
+  },
+  next: {
+    icon: SiNextdotjs,
+    color: "#f5f0e8",
+    soft: "rgba(245, 240, 232, 0.22)",
+    border: "rgba(245, 240, 232, 0.7)",
+  },
+  vue: {
+    icon: SiVuedotjs,
+    color: "#42b883",
+    soft: "rgba(66, 184, 131, 0.32)",
+    border: "rgba(66, 184, 131, 0.88)",
+  },
+  python: {
+    icon: SiPython,
+    color: "#f7c948",
+    soft: "rgba(247, 201, 72, 0.32)",
+    border: "rgba(247, 201, 72, 0.88)",
+  },
+  php: {
+    icon: SiPhp,
+    color: "#ff6b4a",
+    soft: "rgba(255, 107, 74, 0.3)",
+    border: "rgba(255, 107, 74, 0.85)",
+  },
+  laravel: {
+    icon: SiLaravel,
+    color: "#ff6b4a",
+    soft: "rgba(255, 107, 74, 0.3)",
+    border: "rgba(255, 107, 74, 0.85)",
+  },
+  django: {
+    icon: SiDjango,
+    color: "#4ecdc4",
+    soft: "rgba(78, 205, 196, 0.3)",
+    border: "rgba(78, 205, 196, 0.85)",
+  },
+  node: {
+    icon: SiNodedotjs,
+    color: "#68d391",
+    soft: "rgba(104, 211, 145, 0.3)",
+    border: "rgba(104, 211, 145, 0.85)",
+  },
+  docker: {
+    icon: SiDocker,
+    color: "#4ecdc4",
+    soft: "rgba(78, 205, 196, 0.3)",
+    border: "rgba(78, 205, 196, 0.85)",
+  },
+  mysql: {
+    icon: SiMysql,
+    color: "#f7c948",
+    soft: "rgba(247, 201, 72, 0.3)",
+    border: "rgba(247, 201, 72, 0.85)",
+  },
+  postgres: {
+    icon: SiPostgresql,
+    color: "#4ecdc4",
+    soft: "rgba(78, 205, 196, 0.3)",
+    border: "rgba(78, 205, 196, 0.85)",
+  },
+  mongo: {
+    icon: SiMongodb,
+    color: "#68d391",
+    soft: "rgba(104, 211, 145, 0.3)",
+    border: "rgba(104, 211, 145, 0.85)",
+  },
+  html: {
+    icon: SiHtml5,
+    color: "#ff6b4a",
+    soft: "rgba(255, 107, 74, 0.3)",
+    border: "rgba(255, 107, 74, 0.85)",
+  },
+  css: {
+    icon: SiCss,
+    color: "#4ecdc4",
+    soft: "rgba(78, 205, 196, 0.3)",
+    border: "rgba(78, 205, 196, 0.85)",
+  },
+  cloud: {
+    icon: FiCloud,
+    color: "#f7c948",
+    soft: "rgba(247, 201, 72, 0.3)",
+    border: "rgba(247, 201, 72, 0.85)",
+  },
+  data: {
+    icon: FiDatabase,
+    color: "#4ecdc4",
+    soft: "rgba(78, 205, 196, 0.3)",
+    border: "rgba(78, 205, 196, 0.85)",
+  },
+  code: {
+    icon: FiCode,
+    color: "#ff6b4a",
+    soft: "rgba(255, 107, 74, 0.28)",
+    border: "rgba(255, 107, 74, 0.8)",
+  },
+  server: {
+    icon: FiServer,
+    color: "#f5f0e8",
+    soft: "rgba(245, 240, 232, 0.2)",
+    border: "rgba(245, 240, 232, 0.65)",
+  },
+  zap: {
+    icon: FiZap,
+    color: "#f7c948",
+    soft: "rgba(247, 201, 72, 0.32)",
+    border: "rgba(247, 201, 72, 0.88)",
+  },
+  security: {
+    icon: FiShield,
+    color: "#ff6b4a",
+    soft: "rgba(255, 107, 74, 0.28)",
+    border: "rgba(255, 107, 74, 0.8)",
+  },
+  layers: {
+    icon: FiLayers,
+    color: "#4ecdc4",
+    soft: "rgba(78, 205, 196, 0.28)",
+    border: "rgba(78, 205, 196, 0.8)",
+  },
+  api: {
+    icon: FiLink2,
+    color: "#f7c948",
+    soft: "rgba(247, 201, 72, 0.28)",
+    border: "rgba(247, 201, 72, 0.8)",
+  },
+  box: {
+    icon: FiBox,
+    color: "#ff6b4a",
+    soft: "rgba(255, 107, 74, 0.28)",
+    border: "rgba(255, 107, 74, 0.8)",
+  },
+  grid: {
+    icon: FiGrid,
+    color: "#4ecdc4",
+    soft: "rgba(78, 205, 196, 0.28)",
+    border: "rgba(78, 205, 196, 0.8)",
+  },
+  ai: {
+    icon: FiCpu,
+    color: "#f7c948",
+    soft: "rgba(247, 201, 72, 0.28)",
+    border: "rgba(247, 201, 72, 0.8)",
+  },
+} as const satisfies Record<string, SkillTone>;
+
+const skillMap: Record<string, SkillTone> = {
+  JavaScript: tones.js,
+  TypeScript: tones.ts,
+  Python: tones.python,
+  PHP: tones.php,
+  SQL: tones.data,
+  HTML: tones.html,
+  CSS: tones.css,
+  "React.js": tones.react,
+  React: tones.react,
+  "Next.js": tones.next,
+  "Vue.js": tones.vue,
+  "Nuxt.js": tones.vue,
+  Gatsby: tones.react,
+  "Tailwind CSS": tones.css,
+  Bootstrap: tones.css,
+  Shopify: tones.zap,
+  Liquid: tones.code,
+  Laravel: tones.laravel,
+  Django: tones.django,
+  "Express.js": tones.node,
+  NestJS: tones.node,
+  FastAPI: tones.python,
+  Flask: tones.python,
+  "AWS EC2": tones.cloud,
+  "AWS S3": tones.cloud,
+  "AWS RDS": tones.cloud,
+  "AWS Lambda": tones.cloud,
+  Docker: tones.docker,
+  Kubernetes: tones.cloud,
+  Nginx: tones.server,
+  "CI/CD": tones.zap,
+  "GitHub Actions": tones.zap,
+  OpenAPI: tones.api,
+  OpenTelemetry: tones.ai,
+  PostgreSQL: tones.postgres,
+  MySQL: tones.mysql,
+  MariaDB: tones.mysql,
+  MongoDB: tones.mongo,
+  "SQL Server": tones.data,
+  Oracle: tones.data,
+  Redis: tones.data,
+  Prisma: tones.data,
+  SQLAlchemy: tones.python,
+  Jest: tones.security,
+  Vitest: tones.security,
+  "React Testing Library": tones.react,
+  PyTest: tones.python,
+  PHPUnit: tones.php,
+  Cypress: tones.security,
+  Playwright: tones.security,
+};
+
+const fallback: SkillTone = tones.code;
+
+export function getSkillTone(name: string): SkillTone {
+  return skillMap[name] ?? fallback;
+}
