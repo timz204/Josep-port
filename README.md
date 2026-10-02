@@ -1,13 +1,15 @@
-# Clifford Klent Sayson — Portfolio
+# Victor Rodriguez — Portfolio
 
-Premium personal portfolio for a Senior Full Stack WordPress Developer / AI-Powered Web Platform Engineer.
+Professional bilingual portfolio (EN / ES) for a Senior Full Stack Developer based in Xalapa, Veracruz, Mexico.
 
 ## Stack
 
 - Next.js 16 (App Router) + TypeScript
+- React Three Fiber + Drei (3D hero field)
 - Tailwind CSS v4
 - Framer Motion
-- Dark / light mode
+- Dark / light mode + English / Spanish
+- Cloudflare Workers via OpenNext
 
 ## Develop
 
@@ -25,35 +27,47 @@ npm run build
 npm start
 ```
 
+## Deploy to Cloudflare
+
+1. Log in once:
+
+```bash
+npx wrangler login
+```
+
+2. Deploy:
+
+```bash
+npm run deploy
+```
+
+This builds with OpenNext and publishes to Cloudflare Workers.
+
+### Cloudflare dashboard (Workers Builds)
+
+If connecting a Git repo in the Cloudflare dashboard:
+
+- **Build command:** `npx @opennextjs/cloudflare build`
+- **Deploy command:** `npx @opennextjs/cloudflare deploy`
+
+### Local Workers preview
+
+```bash
+npm run preview
+```
+
 ## Sections
 
-1. Hero — positioning, CTAs, code/ecosystem visual
-2. About — platform engineer narrative
-3. Technical Expertise — interactive skill categories
-4. Featured Projects — case-study switcher
-5. Experience — timeline + education
-6. Engineering Architecture — flow diagrams
-7. Insights — technical writing topics
-8. Contact — email / LinkedIn / GitHub
+1. Boot loader — mission-style intro
+2. Hero — 3D interactive field + branding
+3. About — player profile + focus areas
+4. Skills — production loadout
+5. Impact — measurable achievements
+6. Missions — campaign case studies
+7. Experience — career timeline + education
+8. Contact — email / WhatsApp / LinkedIn / resume
 9. `/resume` — print-friendly resume page
 
-## Deploy (Vercel)
+## Content source
 
-1. Push this repository to GitHub.
-2. Import the project in [Vercel](https://vercel.com/new).
-3. Framework preset: **Next.js** (auto-detected).
-4. Build command: `npm run build`
-5. Output: Next.js default
-6. Deploy.
-
-Optional: set the production domain, then update `metadataBase` in `src/app/layout.tsx` to match.
-
-## SEO
-
-Metadata, Open Graph, and Twitter cards are configured in `src/app/layout.tsx`. Content is recruiter-readable with clear headings, experience timelines, and skill language aligned to senior WordPress / platform roles.
-
-## Customize
-
-- Copy & links: `src/data/portfolio.ts`
-- Theme tokens: `src/app/globals.css`
-- Resume content: `src/app/resume/page.tsx` (or replace the Download Resume link with a PDF in `/public/resume.pdf`)
+Content is based on `public/Victor_Resume.pdf`.

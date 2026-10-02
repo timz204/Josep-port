@@ -5,6 +5,7 @@ export function ProfessionalBackground() {
       <div className="professional-glow professional-glow--blue" />
       <div className="professional-glow professional-glow--teal" />
       <div className="professional-grid" />
+      <div className="professional-scanlines" />
       <div className="professional-vignette" />
     </div>
   );

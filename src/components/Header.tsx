@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { navHrefs, site } from "@/data/portfolio";
@@ -10,12 +9,11 @@ import { useI18n } from "@/components/LanguageProvider";
 import { Icons } from "@/lib/icons";
 import { easeOut } from "@/lib/motion";
 
-/** Truly fixed site header — rendered from root layout, never inside fade wrappers */
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
-  const { m } = useI18n();
+  const { m, locale, toggleLocale } = useI18n();
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -54,7 +52,7 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-md bg-accent/15 font-display text-sm text-accent">
-            J
+            {site.monogram}
           </span>
           <span className="truncate">{site.shortName}</span>
         </Link>
@@ -72,6 +70,14 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
+          <button
+            type="button"
+            onClick={toggleLocale}
+            aria-label={m.common.language}
+            className="inline-flex h-9 min-w-9 items-center justify-center rounded-md border border-line bg-canvas px-2 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:border-line-strong hover:text-ink"
+          >
+            {locale === "en" ? "ES" : "EN"}
+          </button>
           <button
             type="button"
             onClick={toggleTheme}
@@ -92,6 +98,14 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-1.5 lg:hidden">
+          <button
+            type="button"
+            onClick={toggleLocale}
+            aria-label={m.common.language}
+            className="inline-flex h-10 min-w-10 items-center justify-center rounded-md border border-line bg-canvas px-2 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-muted"
+          >
+            {locale === "en" ? "ES" : "EN"}
+          </button>
           <button
             type="button"
             onClick={toggleTheme}
@@ -174,7 +188,6 @@ export function Header() {
   );
 }
 
-/** Spacer matching header height — place once at top of page content */
 export function HeaderSpacer() {
   return <div className="h-16 shrink-0 md:h-[4.25rem]" aria-hidden />;
 }

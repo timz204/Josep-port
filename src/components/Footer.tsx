@@ -12,14 +12,32 @@ export function Footer() {
       <div className="section-shell flex flex-col items-center justify-between gap-4 text-sm text-muted sm:flex-row">
         <p>
           {m.footer.crafted}{" "}
-          <span className="font-medium text-ink">{site.name}</span>
+          <span className="font-medium text-ink">{site.displayName}</span>
         </p>
         <div className="flex items-center gap-4">
+          <a
+            href={site.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="transition-colors hover:text-ink"
+          >
+            <Icons.github size={16} />
+          </a>
+          <a
+            href={site.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="transition-colors hover:text-ink"
+          >
+            <Icons.linkedin size={16} />
+          </a>
           <a
             href={site.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={"WhatsApp"}
+            aria-label="WhatsApp"
             className="transition-colors hover:text-ink"
           >
             <Icons.zap size={16} />

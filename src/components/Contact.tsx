@@ -29,7 +29,14 @@ export function Contact() {
       value: site.phoneDisplay,
       href: site.whatsapp,
       icon: Icons.zap,
-      external: false,
+      external: true,
+    },
+    {
+      id: "linkedin" as const,
+      value: "LinkedIn",
+      href: site.linkedin,
+      icon: Icons.linkedin,
+      external: true,
     },
     {
       id: "resume" as const,

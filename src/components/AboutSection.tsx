@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useI18n } from "@/components/LanguageProvider";
 import { focusIcons, Icons } from "@/lib/icons";
 import { interpolate } from "@/i18n";
+import { site } from "@/data/portfolio";
 
 export function AboutSection() {
   const { m } = useI18n();
@@ -21,9 +21,37 @@ export function AboutSection() {
           />
         </Reveal>
 
-        <div className="mt-12 grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+        <div className="mt-12 grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           <Reveal className="min-w-0 space-y-5">
-            <Image src="/joseph-portrait.png" alt="Joseph Bernard Adlaon" width={462} height={498} className="portrait-frame mb-8 w-full max-w-sm rounded-2xl border border-line object-cover" />
+            <div className="player-card mb-2">
+              <div className="player-card__badge">{site.monogram}</div>
+              <div>
+                <p className="font-display text-2xl font-semibold text-ink">{site.displayName}</p>
+                <p className="mt-1 font-mono text-xs uppercase tracking-[0.18em] text-teal">
+                  {m.about.playerLevel}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <a
+                    href={site.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary px-3 py-2 text-xs"
+                  >
+                    <Icons.linkedin size={14} />
+                    LinkedIn
+                  </a>
+                  <a
+                    href={site.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary px-3 py-2 text-xs"
+                  >
+                    <Icons.github size={14} />
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
             <div className="space-y-4 text-[1.02rem] text-muted md:text-lg">
               {m.about.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -41,7 +69,7 @@ export function AboutSection() {
               return (
                 <div
                   key={item.label}
-                  className="flex gap-4 rounded-xl border border-line bg-canvas/60 p-4 backdrop-blur-sm transition-colors hover:border-accent"
+                  className="mission-panel flex gap-4 p-4 transition-colors hover:border-accent"
                 >
                   <span className="icon-chip">
                     <Icon size={18} />
