@@ -9,6 +9,7 @@ import "./globals.css";
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.add('light');}catch(e){}})();`;
 
+
 const manrope = Manrope({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -28,24 +29,24 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Victor Rodriguez | Senior Full Stack Developer",
-    template: "%s | Victor Rodriguez",
+  "title": {
+    "default": "Joseph Bernard Adlaon | WordPress Developer & SEO Specialist",
+    "template": "%s | Joseph Bernard Adlaon"
   },
-  description:
-    "Senior Full Stack Developer from Xalapa, Mexico with 8+ years building scalable web apps using Python, TypeScript, React, and AWS.",
-  keywords: [
-    "Victor Rodriguez",
-    "Victor Manuel Jimenez Rodriguez",
-    "Full Stack Developer",
-    "Python",
-    "React",
-    "AWS",
-    "Mexico",
-    "Xalapa",
+  "description": "WordPress Developer and SEO Specialist with 7+ years of experience developing, optimizing, and maintaining responsive, SEO-friendly websites.",
+  "keywords": [
+    "Joseph Bernard Adlaon",
+    "WordPress Developer",
+    "SEO Specialist",
+    "Elementor Pro",
+    "Philippines"
   ],
-  authors: [{ name: "Victor Rodriguez" }],
-  creator: "Victor Rodriguez",
+  "authors": [
+    {
+      "name": "Joseph Bernard Adlaon"
+    }
+  ],
+  "creator": "Joseph Bernard Adlaon"
 };
 
 export default function RootLayout({

@@ -47,7 +47,6 @@ export type Messages = {
     lead: string;
     paragraphs: string[];
     basedIn: string;
-    playerLevel: string;
     focus: { icon: string; label: string; detail: string }[];
   };
   skills: {
@@ -66,7 +65,6 @@ export type Messages = {
     eyebrow: string;
     title: string;
     description: string;
-    missionLabel: string;
     items: Record<
       string,
       {
